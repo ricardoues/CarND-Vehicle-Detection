@@ -37,11 +37,20 @@ You're reading it!
 
 #### 1. Explain how (and identify where in your code) you extracted HOG features from the training images.
 
-The code for this step is contained at cell codes #11 through #18 in ./P5.ipynb.  
+The code for this step is contained at cell codes #11 through #18 in `./P5.ipynb`.  
 
 I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
 
 ![alt text][image1]
+
+I transformed the images to a grayscale using  the opencv function `cv2.cvtColor`, then I calculated the HOG features with the following parameters: 
+
+* orientations = 9
+* pixels_per_cell = 4
+* cells_per_block = 2
+
+Moreove, I applied a global image normalisation equalisation that is designed to reduce the influence of illumination effects. In practice we use the square root. 
+
 
 I then explored different color spaces and different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`).  I grabbed random images from each of the two classes and displayed them to get a feel for what the `skimage.hog()` output looks like.
 
