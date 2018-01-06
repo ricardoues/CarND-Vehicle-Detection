@@ -53,7 +53,7 @@ I transformed the images to a grayscale using  the opencv function `cv2.cvtColor
 * pixels_per_cell = 8
 * cells_per_block = 2
 
-Moreover, I applied a global image normalization equalisation that is designed to reduce the influence of illumination effects. In practice we use the square root. Furthermore we calculated the color histograms. 
+I applied a global image normalization equalisation that is designed to reduce the influence of illumination effects. In practice we used the square root. Furthermore we calculated the color histograms. 
 
 
 #### 2. Explain how you settled on your final choice of HOG parameters.
