@@ -88,7 +88,7 @@ I decided to search random window positions at random scales all over the image 
 
 ![alt text][image3]
 
-I create the function `find_cars` (cell codes #38 `./P5.ipynb`)  to seach windows and identify cars. The function returns the image with bounding boxes and the coordinates of the bounding boxes. 
+I create the function `find_cars` (cell codes #38 `./P5.ipynb`)  to seach windows and identify cars. The function returns the image with bounding boxes and the coordinates of the bounding boxes. I decided to search windows from the position 400 to 656 in the y-axis. The size of the image in the windows search is 64 pixels with a cells per step equal to 2. 
 
 
 #### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
