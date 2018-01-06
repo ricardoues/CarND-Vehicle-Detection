@@ -69,9 +69,10 @@ I tried various combinations of parameters for HOG features and color channels b
 * Square root for normalization
 
 
-#### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
+#### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features and color histogram.
 
-I trained a linear SVM using...
+Firstly, I used 
+
 
 ### Sliding Window Search
 
