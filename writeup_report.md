@@ -8,7 +8,8 @@
 
 The goals / steps of this project are the following:
 
-* Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train a XGBoost classifier
+* Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and calculate color histograms.
+* Train a XGBoost classifier with the above information.
 * Implement a sliding-window technique and use your trained classifier to search for vehicles in images.
 * Run your pipeline on a video stream (start with the test_video.mp4 and later implement on full project_video.mp4) and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
 * Estimate a bounding box for vehicles detected.
@@ -33,11 +34,11 @@ The goals / steps of this project are the following:
 
 You're reading it!
 
-### Histogram of Oriented Gradients (HOG)
+### Histogram of Oriented Gradients (HOG) and color histogram
 
-#### 1. Explain how (and identify where in your code) you extracted HOG features from the training images.
+#### 1. Explain how (and identify where in your code) you extracted HOG features and color histograms from the training images.
 
-The code for this step is contained at cell codes #11 through #18 in `./P5.ipynb`.  
+The code for this step is contained at cell codes #11 through #23 in `./P5.ipynb`.  
 
 I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
 
