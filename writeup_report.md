@@ -129,4 +129,4 @@ The function process_image (the pipeline) is defined in the cell code #42 in `./
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-There are several conditions that can could affect the performance of the pipeline such as: 
+There are several conditions that can could affect the performance of the pipeline such as: brightness, weather, orientation of the cars, and so on. On the other hand the dataset that was used in our application is not big enough. In order to improve the results, it is necessary to review the state of art of object recognition techniques, it can be help to use the following library for data augmentation.
