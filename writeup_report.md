@@ -93,7 +93,7 @@ I created the function `find_cars` (cell codes #38 `./P5.ipynb`)  to seach windo
 
 #### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
-At the beginning the classifier threw few false positives (only HOG features calculated over grayscale were used) then I improve the model adding information of more channels and color histograms.  Here are some example images:
+At the beginning the classifier threw few false positives (only HOG features calculated over grayscale were used) then I improve the model adding information of more the YCrCb color channels and color histograms.  Here are some example images:
 
 ![alt text][image4]
 ![alt text][image5]
