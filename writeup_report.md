@@ -69,8 +69,16 @@ I tried various combinations of parameters for HOG features and color channels b
 
 #### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features and color histogram.
 
-Firstly, I used principal component analysis in order to reduce the dimension of the input space (HOG features + color histogram), this step was made for theoretical considerations (an input space is prone to overfitting). 750 components were used which explained 83% of the variability of the data.
+Firstly, I used principal component analysis (cell codes #24 through #26 in `./P5.ipynb`) in order to reduce the dimension of the input space (HOG features + color histogram) , this step was made for theoretical considerations (a big input space is prone to overfitting). 750 components were used which explained 83% of the variability of the data.
 
+XGBoost was used for classifying vehicles and non-vehicles.  Grid search was used to determine a good model (there is no guarantee of optimality). 
+
+The best model has the following hyperparameters:
+* n_estimators = 50
+* colsample_bytree = 0.7
+* max_depth = 10
+
+Using cross-validation (fold=4) the average of the metric (ROC AUC) on this model is 0.9992 which is acceptable. In the test set the precision, recall, and f1-score was greater or equal than 0.97.
 
 ### Sliding Window Search
 
