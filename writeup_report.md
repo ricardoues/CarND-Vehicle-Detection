@@ -47,8 +47,6 @@ Here is an example using grayscale and HOG parameters of orientations=9, pixels_
 
 ![alt text][image3]
 
-
-
 I transformed the images to a grayscale using  the opencv function `cv2.cvtColor`, then I calculated the HOG features with the following parameters: 
 
 * orientations = 9
