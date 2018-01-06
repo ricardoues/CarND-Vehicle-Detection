@@ -18,6 +18,10 @@ The goals / steps of this project are the following:
 [image1]: ./images/image01.png
 [image2]: ./images/image02.png
 [image3]: ./images/image03.png
+[image4]: ./images/image04.png
+[image6]: ./images/image05.png
+[image6]: ./images/image06.png
+
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -47,42 +51,54 @@ Here is an example using grayscale and HOG parameters of orientations=9, pixels_
 
 ![alt text][image3]
 
-
-
 I transformed the images to a grayscale using  the opencv function `cv2.cvtColor`, then I calculated the HOG features with the following parameters: 
 
 * orientations = 9
-* pixels_per_cell = 4
+* pixels_per_cell = 8
 * cells_per_block = 2
 
-Moreove, I applied a global image normalisation equalisation that is designed to reduce the influence of illumination effects. In practice we use the square root. 
+I applied a global image normalization equalisation that is designed to reduce the influence of illumination effects. In practice we used the square root. Furthermore we calculated the color histograms. 
 
-Here is an example using grayscale and HOG parameters of `orientations=9`, `pixels_per_cell=(4, 4)` and `cells_per_block=(2, 2)`:
-
-
-![alt text][image2]
 
 #### 2. Explain how you settled on your final choice of HOG parameters.
 
-I tried various combinations of parameters and...
+I tried various combinations of parameters for HOG features and color channels but I chose the following set up: 
 
-#### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
+* Three channels from the YCrCb color channel
+* orientations = 9
+* pixels_per_cell = 8
+* cells_per_block = 2
+* Square root for normalization
 
-I trained a linear SVM using...
+
+#### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features and color histogram.
+
+Firstly, I used principal component analysis (cell codes #24 through #26 in `./P5.ipynb`) in order to reduce the dimension of the input space (HOG features + color histogram) , this step was made for theoretical considerations (a big input space is prone to overfitting). 750 components were used which explained 83% of the variability of the data.
+
+Next, XGBoost was used for classifying vehicles and non-vehicles (cell codes #27 through #37 in `./P5.ipynb`). Grid search was used to determine a good model (there is no guarantee of optimality). 
+
+The best model has the following hyperparameters:
+* n_estimators = 50
+* colsample_bytree = 0.7
+* max_depth = 10
+
+Using cross-validation (fold=4) the average of the metric (ROC AUC) on this model is 0.9992 which is acceptable. In the test set the precision, recall, and f1-score was greater or equal than 0.97.
 
 ### Sliding Window Search
 
 #### 1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
 
-I decided to search random window positions at random scales all over the image and came up with this (ok just kidding I didn't actually ;):
+I created the function `find_cars` (cell codes #38 `./P5.ipynb`)  to seach windows and identify cars. The function returns the image with bounding boxes and the coordinates of the bounding boxes. I decided to search windows from the position 400 to 656 in the y-axis. The size of the image in the windows search is 64 pixels with a cells per step equal to 2. 
 
-![alt text][image3]
 
 #### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
-Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
+.  Here are some example images:
 
 ![alt text][image4]
+![alt text][image5]
+![alt text][image6]
+
 ---
 
 ### Video Implementation
