@@ -19,7 +19,7 @@ The goals / steps of this project are the following:
 [image2]: ./images/image02.png
 [image3]: ./images/image03.png
 [image4]: ./images/image04.png
-[image6]: ./images/image05.png
+[image5]: ./images/image05.png
 [image6]: ./images/image06.png
 
 
