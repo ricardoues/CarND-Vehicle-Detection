@@ -88,6 +88,9 @@ I decided to search random window positions at random scales all over the image 
 
 ![alt text][image3]
 
+I create the function `find_cars` (cell codes #38 `./P5.ipynb`)  to seach windows and identify cars. The function returns the image with bounding boxes and the coordinates of the bounding boxes. 
+
+
 #### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
 Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
