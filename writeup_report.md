@@ -121,8 +121,7 @@ Here are three frames and their corresponding heatmaps and their resulting bound
 ![alt text][image8]
 ![alt text][image9]
 
-
-sda
+The function process_image (the pipeline) is defined in the cell code #42 in `./P5.ipynb`. The video is generated at the cell code #43 in `./P5.ipynb`.  
 
 ---
 
@@ -130,5 +129,4 @@ sda
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
-
+There are several conditions that can could affect the performance of the pipeline such as: 
