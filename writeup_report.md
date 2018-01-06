@@ -38,7 +38,7 @@ You're reading it!
 
 #### 1. Explain how (and identify where in your code) you extracted HOG features and color histograms from the training images.
 
-The code for this step is contained at cell codes #11 through #18 in `./P5.ipynb`.  
+The code for this step is contained at cell codes #11 through #23 in `./P5.ipynb`.  
 
 I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
 
