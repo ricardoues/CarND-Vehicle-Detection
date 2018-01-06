@@ -18,6 +18,10 @@ The goals / steps of this project are the following:
 [image1]: ./images/image01.png
 [image2]: ./images/image02.png
 [image3]: ./images/image03.png
+[image4]: ./images/image04.png
+[image6]: ./images/image05.png
+[image6]: ./images/image06.png
+
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -92,6 +96,9 @@ I created the function `find_cars` (cell codes #38 `./P5.ipynb`)  to seach windo
 .  Here are some example images:
 
 ![alt text][image4]
+![alt text][image5]
+![alt text][image6]
+
 ---
 
 ### Video Implementation
