@@ -71,7 +71,7 @@ I tried various combinations of parameters for HOG features and color channels b
 
 Firstly, I used principal component analysis (cell codes #24 through #26 in `./P5.ipynb`) in order to reduce the dimension of the input space (HOG features + color histogram) , this step was made for theoretical considerations (a big input space is prone to overfitting). 750 components were used which explained 83% of the variability of the data.
 
-XGBoost was used for classifying vehicles and non-vehicles.  Grid search was used to determine a good model (there is no guarantee of optimality). 
+Next, XGBoost was used for classifying vehicles and non-vehicles (cell codes #27 through #37 in `./P5.ipynb`). Grid search was used to determine a good model (there is no guarantee of optimality). 
 
 The best model has the following hyperparameters:
 * n_estimators = 50
