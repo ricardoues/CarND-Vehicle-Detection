@@ -69,7 +69,7 @@ I tried various combinations of parameters for HOG features and color channels b
 
 #### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features and color histogram.
 
-Firstly, I used principal component analysis in order to reduce the dimension of the input space (HOG features + color histogram), this step was made for theoretical considerations (an input space is prone to overfitting). 
+Firstly, I used principal component analysis in order to reduce the dimension of the input space (HOG features + color histogram), this step was made for theoretical considerations (an input space is prone to overfitting). 750 components were used which explained 83% of the variability of the data.
 
 
 ### Sliding Window Search
