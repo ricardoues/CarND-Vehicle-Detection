@@ -52,19 +52,22 @@ Here is an example using grayscale and HOG parameters of orientations=9, pixels_
 I transformed the images to a grayscale using  the opencv function `cv2.cvtColor`, then I calculated the HOG features with the following parameters: 
 
 * orientations = 9
-* pixels_per_cell = 4
+* pixels_per_cell = 8
 * cells_per_block = 2
 
-Moreove, I applied a global image normalisation equalisation that is designed to reduce the influence of illumination effects. In practice we use the square root. 
+Moreover, I applied a global image normalization equalisation that is designed to reduce the influence of illumination effects. In practice we use the square root. Furthermore we calculated the color histograms. 
 
-Here is an example using grayscale and HOG parameters of `orientations=9`, `pixels_per_cell=(4, 4)` and `cells_per_block=(2, 2)`:
-
-
-![alt text][image2]
 
 #### 2. Explain how you settled on your final choice of HOG parameters.
 
-I tried various combinations of parameters and...
+I tried various combinations of parameters for HOG features and color channels but I chose the following set up: 
+
+* Three channels from the YCrCb color channel
+* orientations = 9
+* pixels_per_cell = 8
+* cells_per_block = 2
+* Square root for normalization
+
 
 #### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
