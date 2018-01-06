@@ -34,9 +34,9 @@ The goals / steps of this project are the following:
 
 You're reading it!
 
-### Histogram of Oriented Gradients (HOG)
+### Histogram of Oriented Gradients (HOG) and color histogram
 
-#### 1. Explain how (and identify where in your code) you extracted HOG features from the training images.
+#### 1. Explain how (and identify where in your code) you extracted HOG features and color histograms from the training images.
 
 The code for this step is contained at cell codes #11 through #18 in `./P5.ipynb`.  
 
