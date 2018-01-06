@@ -16,6 +16,8 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 [image1]: ./images/image01.png
+[image2]: ./images/image02.png
+[image3]: ./images/image03.png
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -39,9 +41,11 @@ I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an 
 
 I then explored different color spaces and different skimage.hog() parameters (orientations, pixels_per_cell, and cells_per_block). I grabbed random images from each of the two classes and displayed them to get a feel for what the skimage.hog() output looks like.
 
-Here is an example using grayscale and HOG parameters of orientations=9, pixels_per_cell=(8, 8) and cells_per_block=(2, 2):
+Here is an example using grayscale and HOG parameters of orientations=9, pixels_per_cell=(8, 8) and cells_per_block=(2, 2) for `vehicle` and `non-vehicle` images:
 
 ![alt text][image2]
+
+![alt text][image3]
 
 
 
