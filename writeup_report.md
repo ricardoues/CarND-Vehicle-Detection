@@ -84,16 +84,12 @@ Using cross-validation (fold=4) the average of the metric (ROC AUC) on this mode
 
 #### 1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
 
-I decided to search random window positions at random scales all over the image and came up with this (ok just kidding I didn't actually ;):
-
-![alt text][image3]
-
-I create the function `find_cars` (cell codes #38 `./P5.ipynb`)  to seach windows and identify cars. The function returns the image with bounding boxes and the coordinates of the bounding boxes. I decided to search windows from the position 400 to 656 in the y-axis. The size of the image in the windows search is 64 pixels with a cells per step equal to 2. 
+I created the function `find_cars` (cell codes #38 `./P5.ipynb`)  to seach windows and identify cars. The function returns the image with bounding boxes and the coordinates of the bounding boxes. I decided to search windows from the position 400 to 656 in the y-axis. The size of the image in the windows search is 64 pixels with a cells per step equal to 2. 
 
 
 #### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
-Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
+.  Here are some example images:
 
 ![alt text][image4]
 ---
