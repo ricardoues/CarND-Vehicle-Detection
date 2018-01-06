@@ -131,4 +131,4 @@ The function process_image (the pipeline) is defined in the cell code #42 in `./
 
 There are several conditions that can could affect the performance of the pipeline such as: brightness, weather, orientation of the cars, and so on. On the other hand the dataset that was used in our application is not big enough. In order to improve the results, it is necessary to review the state of art of object recognition techniques, it can be helpful to use the following python library for data augmentation:
 
-(imgaug)[https://github.com/aleju/imgaug?utm_content=buffer7285c&utm_medium=social&utm_source=linkedin.com&utm_campaign=buffer]
+[imgaug](https://github.com/aleju/imgaug)
